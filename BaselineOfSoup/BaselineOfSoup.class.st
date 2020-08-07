@@ -19,10 +19,10 @@ BaselineOfSoup >> baseline: spec [
 					repository: 'http://www.smalltalkhub.com/mc/PharoExtras/XMLParser/main' ]."
 	spec
 		for: #pharo
-		do: [ spec configuration: 'XMLParser' 
-				with: [ spec
-					versionString: #'stable';
-					repository: 'http://www.smalltalkhub.com/mc/PharoExtras/XMLParser/main' ].			
+		do: [ 
+		spec
+			baseline: 'XMLParser' with: [ 
+				spec repository: 'github://pharo-contributions/XML-XMLParser:3.5.0/src'].			
 		spec 
 			package: 'Soup-Core' with: [
 				spec requires: #('XMLParser' ). ];
